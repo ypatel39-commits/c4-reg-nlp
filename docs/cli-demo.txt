@@ -1,0 +1,27 @@
+$ python scripts/run_demo.py
+[1/5] Loading taxonomy + rule text...
+      taxonomy summary: {'NIST': 30, 'COSO': 10}
+      segmented into 7 clauses
+[2/5] Loading sentence-transformer model (all-MiniLM-L6-v2)...
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 9750.23it/s]
+[3/5] Indexing controls into chromadb...
+[4/5] Matching clauses to controls...
+[5/5] Writing artifacts...
+      wrote docs/sample-mapping.csv
+      wrote docs/gaps.json
+DONE: 7 clauses mapped; 2 gaps flagged.
+
+# Resulting clause -> control mapping (from docs/sample-mapping.csv,
+# threshold=0.40):
+#
+#   id     section  best control                          sim    gap
+#   C001   -        CC-2.1 Specifies Suitable Objectives  0.351  YES
+#   C002   Sec 1    CC-2.2 Identifies and Analyzes Risk   0.449  no
+#   C003   Sec 2    CC-1.2 Exercises Oversight Resp.      0.531  no
+#   C004   Sec 3    CC-2.2 Identifies and Analyzes Risk   0.497  no
+#   C005   Sec 4    CC-2.1 Specifies Suitable Objectives  0.377  YES (GHG emissions)
+#   C006   Sec 5    CC-2.1 Specifies Suitable Objectives  0.402  no
+#   C007   Sec 6    CC-4.1 Uses Relevant Information      0.455  no
+
+# Captured live on 2026-05-01 from a real pipeline run.
+# Similarity values match docs/sample-mapping.csv exactly.

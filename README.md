@@ -3,6 +3,27 @@
 **Regulatory rule -> internal control mapper** with semantic search + gap detection.
 Built for the legal-tech / RegTech segment of Yash Patel's finance portfolio.
 
+## Demo
+
+![SEC climate-rule clauses mapped to controls; 2 of 7 fall below the gap threshold](docs/screenshot.png)
+
+```text
+$ python scripts/run_demo.py
+Rule -> Control mapping (7 clauses, 40 controls, threshold=0.40)
+  C001  -        SEC 33-11275 header                CC-2.1   0.351   GAP
+  C002  Sec 1    Material climate risks             CC-2.2   0.449   ok
+  C003  Sec 2    Governance and oversight           CC-1.2   0.531   ok
+  C004  Sec 3    Risk management processes          CC-2.2   0.497   ok
+  C005  Sec 4    GHG emissions disclosure           CC-2.1   0.377   GAP
+  C006  Sec 5    Financial statement effects        CC-2.1   0.402   ok
+  C007  Sec 6    Internal controls and attestation  CC-4.1   0.455   ok
+2 potential control-library gaps flagged.
+```
+
+Full output: [`docs/cli-demo.txt`](docs/cli-demo.txt) | Mapping CSV: [`docs/sample-mapping.csv`](docs/sample-mapping.csv) | Gaps JSON: [`docs/gaps.json`](docs/gaps.json)
+
+---
+
 ## What it does
 
 1. Loads a curated taxonomy of internal controls (30 NIST SP 800-53 rev 5 + 10 COSO 2013).
