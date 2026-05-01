@@ -1,0 +1,55 @@
+{
+  "rule_path": "/Users/yashpatel/Projects/yashpatel-finance-projects/c4-reg-nlp/data/sample_rule.txt",
+  "top_k": 3,
+  "threshold": 0.4,
+  "n_clauses": 7,
+  "n_gaps": 2,
+  "gaps": [
+    {
+      "clause_id": "C001",
+      "section": null,
+      "best_similarity": 0.3507,
+      "text": "SEC Final Rule, Release No. 33-11275: The Enhancement and Standardization of Climate-Related Disclosures for Investors (March 2024)",
+      "top_matches": [
+        {
+          "id": "CC-2.1",
+          "name": "Specifies Suitable Objectives",
+          "similarity": 0.3507
+        },
+        {
+          "id": "CC-4.2",
+          "name": "Communicates Externally",
+          "similarity": 0.3147
+        },
+        {
+          "id": "RA-7",
+          "name": "Risk Response",
+          "similarity": 0.2631
+        }
+      ]
+    },
+    {
+      "clause_id": "C005",
+      "section": "Section 4. Greenhouse Gas Emissions Disclosure.",
+      "best_similarity": 0.3768,
+      "text": "Larger filers (LAFs and AFs) are required to disclose their Scope 1 and Scope 2 greenhouse gas emissions on a phased-in basis, when those emissions are material. The disclosed emissions must be subject to an attestation report at the limited assurance level, transitioning to reasonable assurance for LAFs in subsequent years. Registrants must describe the methodology, significant inputs, and significant assumptions used to calculate the disclosed emissions.",
+      "top_matches": [
+        {
+          "id": "CC-2.1",
+          "name": "Specifies Suitable Objectives",
+          "similarity": 0.3768
+        },
+        {
+          "id": "CC-2.2",
+          "name": "Identifies and Analyzes Risk",
+          "similarity": 0.3388
+        },
+        {
+          "id": "RA-7",
+          "name": "Risk Response",
+          "similarity": 0.3237
+        }
+      ]
+    }
+  ]
+}

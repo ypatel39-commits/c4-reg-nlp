@@ -1,13 +1,30 @@
 [project]
 name = "c4-reg-nlp"
 version = "0.1.0"
-description = "Yash Patel - Finance Project: c4-reg-nlp"
+description = "Yash Patel - Finance Project: c4-reg-nlp - Regulatory rule -> internal control mapping via embeddings"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "sentence-transformers>=3.0",
+    "chromadb>=0.5",
+    "beautifulsoup4>=4.12",
+    "requests>=2.31",
+    "pandas>=2.2",
+    "streamlit>=1.36",
+    "plotly>=5.20",
+    "click>=8.1",
+    "numpy>=1.26",
+]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
